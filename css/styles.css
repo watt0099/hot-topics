@@ -256,7 +256,7 @@ footer h4{
 
   #portfolioGrid{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     grid-gap:.5rem;
   }
 
