@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="Content-Type" charset="utf-8" />
+	<html lang="en">
+	<title>Alex Watt  MTM1526 FINAL</title>
+
+	<!-- LOAD STYLES -->
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+	
+	<header>
+		<div class="wrapper">
+			<nav id="navBar">
+
+				<ul>
+					<li id="active"><a href="index.html">Home</a></li>
+					<li class="portfolio">Portfolio</li>
+				</ul>
+			</nav>
+			
+		</div>
+	</header>
+<div id="masthead">
+		<h1>The Future<br> is <br>Almost Here</h1>
+	</div>
+	<main id="mainContent">
+
+		
+		
+		<div class="wrapper container" id="" >
+			<script>
+				
+				fetch("partials/articles.html")
+				.then(function (rsp) {
+					return rsp.text();
+				})
+				.then( function (data){
+					loadHere.innerHTML = data;
+				})
+
+
+			</script>
+			
+		</div>
+
+		<div class="clearfix"></div>
+
+	</main>
+
+	<footer id="footer">
+		<hr>
+		<div class="wrapper footerContent">
+			<a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+			<a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+
+			
+		</div>
+		<h4 class="wrapper">©2020 Future Thoughts Inc.<br>438.867.5309<br>22 Hilda St. | Everytown | Ontario | Canada</h4>
+
+	</footer>
+
+
+	<!-- Linked Javascript file -->
+	<script src="js/index.js"></script>
+</body>
+</html>

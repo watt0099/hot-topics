@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css?family=Grenze|Lato&display=swap');
+
+/*----- General Styles -----*/
+body{
+  margin: 0;
+  padding: 0;
+  font-size: .75rem;
+  line-height: 1.5;
+  font-family: 'Lato', sans-serif;
+  background: radial-gradient(ellipse at center, rgba(31, 206, 158,.5) 0%, rgba(102, 164, 163,.5) 50%, #FFFFFF 100%);
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing:border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+input, select, button{
+  outline:none;
+  border:none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: none;
+}
+
+ul{
+  list-style-type: none;
+  padding: 1rem;
+  
+}
+
+li{
+  padding: 0 2rem;
+  margin: 0 1rem;
+}
+
+h1, h2, h3,h4{
+  letter-spacing: 3px;
+  font-variant: small-caps;
+  font-family: 'Grenze', serif;
+  color: #008080;
+}
+
+/*Scrollbar*/
+/* width */
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkgrey;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/*---------- MOBILE VIEW ----------*/
+
+.wrapper{
+  padding: 3rem;
+  background: rgba(255,255,255,.8);
+}
+
+/*----- Masthead -----*/
+
+#masthead{
+  background-image: url("../img/sunriseSpace.jpg");
+  height: 30rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+text-shadow: 2px 2px 4px #000000;
+}
+
+#masthead h1{
+  margin: 0;
+  padding-top: 3rem;
+  text-align: center;
+  color: #fff;
+  font-size: 5rem;
+}
+
+/*----- Nav Bar -----*/
+
+#navBar{
+  text-align: center;
+  transition: .2s ease-in;
+}
+
+#navBar li{
+  display: inline-block;
+  font-size: 1.5rem;
+  font-variant: small-caps;
+}
+
+#navBar li:hover{
+  border-bottom: 1px dashed #ccc;
+}
+
+#navBar a{
+  color: black;
+}
+
+/*----- Main Content -----*/
+
+.articlesTitle{
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+ .articles p{
+    padding: 2rem;
+    font-size: 1rem;
+  }
+
+/*----- Portfolio -----*/
+
+#portfolioGrid{
+  display: grid;
+  grid-template-columns: auto;
+  align-content: center;
+  text-align: center;
+   grid-gap: .5rem;
+}
+
+figure{
+  margin: 0;
+}
+
+img.thumbnail {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  opacity: .8;
+  transition: .2s ease-in;
+}
+
+img.thumbnail:hover{
+  opacity: 1;
+  border-radius: 4px;
+  }
+
+/*CSS for the Lightbox location image*/
+/*https://codepen.io/gschier/pen/HCoqh*/
+.lightbox {
+  /** Default lightbox to hidden */
+  display: none;
+
+  /** Position and style */
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+  /** Pad the lightbox image */
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 2%;
+}
+
+.lightbox:target {
+  /** Remove default browser outline */
+  outline: none;
+
+  /** Unhide lightbox **/
+  display: block;
+}
+
+
+
+/*----- Footer -----*/
+
+footer{
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.footerContent{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-content: center;
+  justify-content: center;
+  transition: .05s ease-in;
+}
+
+footer h4{
+  margin: 0;
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+
+/*----- Glyph icons -----*/
+.fab, .fas {
+  text-align: center;
+  color: #204060;
+  font-size: 5rem;
+  margin: 1.5rem;
+  transition: .3s ease-in;
+}
+
+.fab:hover, .fas:hover{
+  color: #008080;
+  transform: translateY(-4%);
+
+}
+
+/*---------- TABLET VIEW ----------*/
+@media screen and (min-width: 35rem) {
+
+  body{
+    font-size: 1rem;
+  }
+
+  .articles img{
+    float: left;
+    margin: .5rem 1.5rem 1.5rem 0;
+    width: 40%;
+    height: auto;
+    box-shadow: 0px 20px 0px -10px #FFFFFF, 0px -20px 0px -10px #FFFFFF, 20px 0px 0px -10px #FFFFFF, -20px 0px 0px -10px #FFFFFF, 0px 0px 0px 10px rgba(32, 64, 96, .5), 5px 5px 15px 5px rgba(0,0,0,0);
+  }
+
+  .articles p{
+    padding-left: .5rem;
+    margin: 0;
+  }
+  .articles img{
+    padding: .5rem;
+  }
+
+  #portfolioGrid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap:.5rem;
+  }
+
+
+
+  /*--- Nav Bar ---*/
+
+
+
+  } /*Tablet view ends*/
+
+  /*---------- DESKTOP VIEW ----------*/
+
+  @media screen and (min-width: 80rem) {
+
+   .wrapper{
+    width: 60rem;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  /*----- Main Content -----*/
+
+  .container p{
+    font-size: 1.1rem;
+  }
+
+  .articles{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .articles img{
+    width: 70%;
+    float: none;
+    margin: 0 auto;
+  }
+
+  /*----- Portfolio -----*/
+  #portfolioGrid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
